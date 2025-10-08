@@ -149,6 +149,7 @@ function handleEnter() {
     // window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }
 }
+useEffect(() => { focusField("name"); }, []);
 
   return (
     <div
@@ -163,7 +164,7 @@ function handleEnter() {
       <form
         onSubmit={handleSubmit}
         style={{border:"solid 1px red"}}
-        className="mt-70 flex flex-col gap-10 w-full max-w-2xl bg-black/70 backdrop-blur-md p-16 rounded-3xl shadow-2xl"
+        className="mt-120 flex flex-col gap-10 w-full max-w-2xl bg-black/70 backdrop-blur-md p-16 rounded-3xl shadow-2xl"
       >
         <h1 className="text-6xl font-extrabold text-center text-white drop-shadow-lg">
           Cadastre-se

@@ -143,20 +143,21 @@ export function Keyboard({
   const visible = activeField !== null;
 
   return (
-    <div
-      className={`fixed bottom-0 left-0 w-full px-6 pb-6 pt-3 transition-transform ${
-        visible ? "translate-y-0" : "translate-y-full"
-      }`}
-      style={{ zIndex: 9999 }}
-    >
-      <div className="mx-auto max-w-6xl rounded-3xl border border-white/15 bg-black/55 backdrop-blur-xl shadow-[0_0_60px_rgba(168,85,247,0.35)]">
-        <div className="h-1.5 w-full rounded-t-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400" />
-        <ul className="w-full flex flex-col gap-3 p-5">
-          {keyboardLayout.map((rows, index) => (
-            <Rows onKeyPress={handleKeyPress} key={`rows:${index}`} row={rows} />
-          ))}
-        </ul>
-      </div>
-    </div>
+   <div
+  className={`fixed top-0 left-0 w-full px-6 pt-6 pb-4 transition-transform ${
+    visible ? "translate-y-0" : "-translate-y-full"
+  }`}
+  style={{ zIndex: 9999 }}
+>
+  <div className="mx-auto max-w-6xl rounded-b-3xl border border-white/15 bg-black/55 backdrop-blur-xl shadow-[0_0_60px_rgba(168,85,247,0.35)]">
+    {/* faixa de brilho no topo (pode mover pro fim se preferir embaixo) */}
+    <div className="h-1.5 w-full rounded-t-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400" />
+    <ul className="w-full flex flex-col gap-3 p-5">
+      {keyboardLayout.map((rows, index) => (
+        <Rows onKeyPress={handleKeyPress} key={`rows:${index}`} row={rows} />
+      ))}
+    </ul>
+  </div>
+</div>
   );
 }
