@@ -159,11 +159,11 @@ export default function Roleta() {
       </div>
 
       {/* Mensagem de redirecionamento */}
-      {redirecting && (
+      {/* {redirecting && (
         <div role="status" aria-live="polite" className="mt-6 text-white/90 text-2xl font-semibold">
           Redirecionando para a tela de brinde...
         </div>
-      )}
+      )} */}
     </div>
   );
 }
