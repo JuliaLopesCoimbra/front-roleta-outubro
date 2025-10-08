@@ -164,6 +164,7 @@ useEffect(() => { focusField("name"); }, []);
       <form
         onSubmit={handleSubmit}
         style={{border:"solid 1px red"}}
+        //aumenta a margin top aqui
         className="mt-120 flex flex-col gap-10 w-full max-w-2xl bg-black/70 backdrop-blur-md p-16 rounded-3xl shadow-2xl"
       >
         <h1 className="text-6xl font-extrabold text-center text-white drop-shadow-lg">
