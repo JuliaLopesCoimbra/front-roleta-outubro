@@ -40,11 +40,14 @@ export default function BrindePage() {
         backgroundImage: "url('/tela4.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        // border:"solid 1px red"
       }}
       className="relative min-h-screen w-full overflow-hidden"
+
     >
-      <main className="relative z-10 flex min-h-screen items-center justify-center p-8">
-        <div className="w-full max-w-5xl rounded-[2rem] border border-white/10 bg-white/5 p-16 shadow-2xl backdrop-blur-xl">
+      <main className="relative z-10 flex min-h-screen  justify-center p-8"
+      >
+        <div className="mt-30 h-[70vh] w-full max-w-5xl rounded-[2rem] border border-white/10 bg-white/5 p-12 shadow-2xl backdrop-blur-xl">
           <header className="mb-10 text-center">
             <h1 className="text-7xl font-extrabold tracking-tight text-white">
               🎉 Seu Brinde
@@ -56,7 +59,7 @@ export default function BrindePage() {
 
           {loading ? (
             <div className="flex flex-col items-center">
-              <div className="h-[65vh] w-[65vh] animate-pulse rounded-3xl bg-white/10" />
+              <div className="h-[45vh] w-[45vh] animate-pulse rounded-3xl bg-white/10" />
               <div className="mt-6 h-10 w-72 animate-pulse rounded-lg bg-white/10" />
             </div>
           ) : brinde ? (
@@ -64,7 +67,7 @@ export default function BrindePage() {
               <img
                 src={brinde.image}
                 alt={brinde.name}
-                className="h-[65vh] w-[65vh] rounded-3xl object-contain ring-1 ring-white/10"
+                className="h-[45vh] w-[45vh] rounded-3xl object-contain ring-1 ring-white/10"
                 draggable={false}
               />
               <p className="mt-6 text-5xl font-bold text-white">

@@ -116,7 +116,7 @@ export default function Roleta() {
       }}
       className="flex min-h-screen flex-col items-center justify-center p-24 bg-cover bg-center"
     >
-      <div className="relative flex justify-center items-center w-[55vh] h-[55vh] mt-80">{/* FIX: mt-100 -> mt-24 */}
+      <div className="relative flex justify-center items-center w-[55vh] h-[55vh] mt-50">{/* FIX: mt-100 -> mt-24 */}
         <img
           src="/roleta1.png"
           alt="Roleta"
@@ -146,8 +146,8 @@ export default function Roleta() {
           disabled={buttonDisabled}
           aria-disabled={buttonDisabled}
           aria-busy={isSpinning || redirecting}
-          className={`inline-flex items-center gap-2 px-16 py-8 rounded-xl
-                      border border-white/25 text-white text-6xl font-semibold
+          className={`inline-flex items-center gap-2 px-12 py-8 rounded-xl
+                      border border-white/25 text-white text-5xl font-semibold
                       bg-transparent hover:bg-white/10 active:bg-white/15
                       transition-colors duration-200
                       focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
