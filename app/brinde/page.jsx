@@ -70,7 +70,7 @@ export default function BrindePage() {
                 className="h-[45vh] w-[45vh] rounded-3xl object-contain ring-1 ring-white/10"
                 draggable={false}
               />
-              <p className="mt-4 text-5xl font-bold text-white">
+              <p className="mt-2 text-5xl font-bold text-white">
                 {DISPLAY_NAMES[brinde.name] || brinde.name}
               </p>
 

@@ -118,7 +118,7 @@ export default function Roleta() {
     >
       <div className="relative flex justify-center items-center w-[55vh] h-[55vh] mt-50">{/* FIX: mt-100 -> mt-24 */}
         <img
-          src="/roleta.png"
+          src="/roleta1.png"
           alt="Roleta"
           className={`absolute top-0 left-0 z-[1] w-full h-full transition-transform duration-[10000ms] [transition-timing-function:cubic-bezier(0.1,1,0.3,1)] ${
             isSpinning ? 'filter blur-[1.6px] drop-shadow-[0_0_30px_rgba(139,92,246,0.7)]' : 'transition-none'
