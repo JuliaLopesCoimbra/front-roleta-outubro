@@ -121,6 +121,34 @@ export default function Login() {
       setLoading(false);
     }
   }
+  function focusField(field) {
+  setFocusedInput(field);
+  setTimeout(() => {
+    const el =
+      field === "name" ? nameRef.current :
+      field === "email" ? emailRef.current :
+      field === "cpf" ? cpfRef.current : null;
+    if (el) {
+      el.focus();
+      const len = el.value?.length ?? 0;
+      el.setSelectionRange(len, len);
+      setCaretPos(len);
+    }
+  }, 0);
+}
+
+// callback chamado pela tecla Enter do teclado
+function handleEnter() {
+  if (focusedInput === "name") return focusField("email");
+  if (focusedInput === "email") return focusField("cpf");
+  if (focusedInput === "cpf") {
+    // fecha o teclado e tira o foco do input
+    setFocusedInput(null);
+    if (cpfRef.current) cpfRef.current.blur();
+    // opcional: rolar um pouco pra dar espaço ao botão "Cadastrar"
+    // window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+}
 
   return (
     <div
@@ -215,13 +243,15 @@ export default function Login() {
       </form>
 
       
-      <Keyboard
-        activeField={focusedInput}
-        value={getFocusedValue()}
-        setValue={(fieldName, value) => setFocusedValue(fieldName, value)}
-        valueSelectPosition={caretPos}
-        setSelectionPositionOfFocusedInput={(pos) => setCaretPos(pos)}
-      />
+     <Keyboard
+  activeField={focusedInput}
+  value={getFocusedValue()}
+  setValue={(fieldName, value) => setFocusedValue(fieldName, value)}
+  valueSelectPosition={caretPos}
+  setSelectionPositionOfFocusedInput={(pos) => setCaretPos(pos)}
+  onEnter={handleEnter}   // ⬅ aqui!
+/>
+
     </div>
   );
 }
