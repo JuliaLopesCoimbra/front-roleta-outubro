@@ -130,12 +130,14 @@ export default function Login() {
         backgroundSize: "cover",
       }}
       className="relative flex min-h-screen flex-col items-center  bg-cover bg-center overflow-hidden"
+      
     >
       <form
         onSubmit={handleSubmit}
-        className="mt-120 flex flex-col gap-10 w-full max-w-3xl bg-black/70 backdrop-blur-md p-16 rounded-3xl shadow-2xl"
+        style={{border:"solid 1px red"}}
+        className="mt-70 flex flex-col gap-10 w-full max-w-2xl bg-black/70 backdrop-blur-md p-16 rounded-3xl shadow-2xl"
       >
-        <h1 className="text-7xl font-extrabold text-center text-white drop-shadow-lg">
+        <h1 className="text-6xl font-extrabold text-center text-white drop-shadow-lg">
           Cadastre-se
         </h1>
 
@@ -148,7 +150,7 @@ export default function Login() {
           onFocus={() => onFocusInput("name")}
           onClick={onClickOrSelect}
           onSelect={onClickOrSelect}
-          className="p-8 text-4xl rounded-2xl border-4 border-pink-500 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-pink-400"
+          className="p-6 text-3xl rounded-2xl border-4 border-pink-500 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-pink-400"
           autoComplete="off"
           autoCapitalize="words"
           autoCorrect="off"
@@ -164,7 +166,7 @@ export default function Login() {
           onFocus={() => onFocusInput("email")}
           onClick={onClickOrSelect}
           onSelect={onClickOrSelect}
-          className="p-8 text-4xl rounded-2xl border-4 border-cyan-400 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-cyan-300"
+          className="p-6 text-3xl rounded-2xl border-4 border-cyan-400 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-cyan-300"
           autoComplete="off"
           autoCapitalize="none"
           autoCorrect="off"
@@ -191,7 +193,7 @@ export default function Login() {
           onSelect={onClickOrSelect}
           inputMode="numeric"
           maxLength={14}
-          className="p-8 text-4xl rounded-2xl border-4 border-green-400 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-green-300"
+          className="p-6 text-3xl rounded-2xl border-4 border-green-400 bg-black/70 text-white placeholder-gray-300 focus:outline-none focus:ring-4 focus:ring-green-300"
           aria-label="CPF"
           autoComplete="off"
           autoCapitalize="none"
@@ -202,7 +204,7 @@ export default function Login() {
         <button
           type="submit"
           disabled={loading || redirecting}
-          className="py-8 text-5xl rounded-2xl font-extrabold text-white bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 hover:scale-105 transition-transform shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
+          className="py-6 text-4xl rounded-2xl font-extrabold text-white bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 hover:scale-105 transition-transform shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {redirecting
             ? "Redirecionando..."
