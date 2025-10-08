@@ -41,3 +41,8 @@ nextjs-portal {
   margin: 0 auto;              /* centraliza horizontalmente */
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}

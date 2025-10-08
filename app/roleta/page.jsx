@@ -116,7 +116,7 @@ export default function Roleta() {
       }}
       className="flex min-h-screen flex-col items-center justify-center p-24 bg-cover bg-center"
     >
-      <div className="relative flex justify-center items-center w-[50vh] h-[50vh] mt-50">{/* FIX: mt-100 -> mt-24 */}
+      <div className="relative flex justify-center items-center w-[55vh] h-[55vh] mt-50">{/* FIX: mt-100 -> mt-24 */}
         <img
           src="/roleta1.png"
           alt="Roleta"

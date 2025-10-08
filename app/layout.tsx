@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className={inter.className}>{children}
+     <body className={`${inter.className} overflow-hidden overscroll-none`}>{children}
        <Toaster richColors position="top-left" />
       </body>
     </html>
