@@ -34,7 +34,7 @@ export default function Roleta() {
   const VISUAL_OFFSET_DEG = -18; // ok se calibrado assim
 
   async function handleSpin() {
-    const personId = localStorage.getItem("personId");
+    const personId = 1;
     if (!personId) {
       router.replace("/");
       return;
