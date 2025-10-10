@@ -74,7 +74,7 @@ export default function Login() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="relative flex min-h-[100dvh] flex-col items-center bg-cover bg-center"
+      className="relative flex min-h-[100dvh] flex-col items-center justify-center bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-black/40" />
 
